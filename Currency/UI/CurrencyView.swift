@@ -9,12 +9,13 @@ struct CurrencyView: View {
                 VStack(spacing: 20) {
                     GroupBox(
                       label:
-                        CurrencyLabelView(labelText: "Moedas", labelImage: "dollarsign.circle")
+                        CurrencyLabelView(labelText: "Moeda", labelImage: "dollarsign.circle")
                     ) {
-                        CurrencyRowView(name: "Dolar", value: "R$ 0.19")
-                        CurrencyRowView(name: "Euro", value: "R$ 0.19")
-                        CurrencyRowView(name: "Yen", value: "R$ 26.28")
+                        CurrencyRowView(name: "🇺🇸 Dolar", value: "R$ 0.19")
+                        CurrencyRowView(name: "🇪🇺 Euro", value: "R$ 0.19")
+                        CurrencyRowView(name: "🇯🇵 Yen", value: "R$ 26.28")
                     } //: GROUPBOX
+                    .padding()
                 } //: VSTACK
             }
         }

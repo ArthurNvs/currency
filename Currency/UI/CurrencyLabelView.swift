@@ -14,7 +14,7 @@ struct CurrencyLabelView: View {
 
 struct CurrencyLabelView_Previews: PreviewProvider {
   static var previews: some View {
-      CurrencyLabelView(labelText: "Moedas", labelImage: "dollarsign.circle")
+      CurrencyLabelView(labelText: "Moeda", labelImage: "dollarsign.circle")
       .previewLayout(.sizeThatFits)
       .padding()
   }

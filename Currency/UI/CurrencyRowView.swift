@@ -8,10 +8,10 @@ struct CurrencyRowView: View {
     VStack {
       Divider().padding(.vertical, 4)
       HStack {
-        Text(name).foregroundColor(Color.gray)
+        Text(name).foregroundColor(Color.blue)
         Spacer()
         if (value != nil) {
-          Text(value!)
+          Text(value!).foregroundColor(Color.blue)
         } else {
           /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
         }
