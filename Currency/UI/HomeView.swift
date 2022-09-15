@@ -3,14 +3,16 @@ import Combine
 
 struct HomeView: View {
     @State private var value = 0.0
-    
     @State private var selectedCurrency = "Dollar"
+    
+    private var result = 0.0
     let currencies = ["Dollar", "Euro", "Yen"]
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
+                    Text("Quantidade (Real)")
                     TextField("Valor", value: $value, format:
                             .currency(code: Locale.current.currencyCode ?? "USD"))
                             .keyboardType(.decimalPad)
@@ -23,6 +25,11 @@ struct HomeView: View {
                 }
                 
                 CalcButtonView(value: value, currency: selectedCurrency)
+                
+                Section {
+                    Text("Total (\(selectedCurrency))")
+                    Text("\(result.formatted(.currency(code: Locale.current.currencyCode ?? "USD")))")
+                }
             }
             .navigationTitle("Currency")
         }
