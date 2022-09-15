@@ -8,25 +8,26 @@ struct HomeView: View {
     let currencies = ["Dollar", "Euro", "Yen"]
     
     var body: some View {
-        VStack {
-            HStack {
-                Picker("Moeda", selection: $selectedCurrency) {
-                    ForEach(currencies, id: \.self) {
-                        Text($0)
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Valor", value: $value, format:
+                            .currency(code: Locale.current.currencyCode ?? "USD"))
+                            .keyboardType(.decimalPad)
+                
+                    Picker("Moeda", selection: $selectedCurrency) {
+                        ForEach(currencies, id: \.self) {
+                            Text($0)
+                        }
                     }
                 }
-                .foregroundColor(.gray)
                 
-                TextField("Valor", value: $value, format:
-                        .currency(code: Locale.current.currencyCode ?? "USD"))
-                        .keyboardType(.decimalPad)
-                }
-            
-            CalcButtonView(value: value, currency: selectedCurrency)
-            
+                CalcButtonView(value: value, currency: selectedCurrency)
             }
+            .navigationTitle("Currency")
         }
     }
+}
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
