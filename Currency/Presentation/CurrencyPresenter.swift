@@ -1,17 +1,13 @@
-class CurrencyPresenter: GetCurrencyProtocol {
+public class CurrencyPresenter: GetCurrencyProtocol {
     
-    var currency: FetchCurrency
-    
-    init(fetchCurrency: FetchCurrency) {
-        self.currency = fetchCurrency
-    }
+    var currency = FetchCurrency()
     
     func dollarToReal(value: Double) -> Double {
-        currency.getDollar().real * value
+        currency.getDollar().toReal * value
     }
     
     func realToDollar(value: Double) -> Double {
-        currency.getReal().dollar * value
+        currency.getReal().toDollar * value
     }
     
 }

@@ -1,16 +1,9 @@
 public class FetchCurrency: GetClientProtocol {
     
-    var real: Real
-    var euro: Euro
-    var dollar: Dollar
-    var yen: Yen
-    
-    required init(real: Real, euro: Euro, dollar: Dollar, yen: Yen) {
-        self.real = real
-        self.euro = euro
-        self.dollar = dollar
-        self.yen = yen
-    }
+    var real = Real()
+    var euro = Euro()
+    var dollar = Dollar()
+    var yen = Yen()
     
     func getReal() -> Real {
         return real

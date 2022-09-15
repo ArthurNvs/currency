@@ -1,24 +1,24 @@
 struct Real {
-    var dollar = 0.19
-    var euro = 0.19
-    var yen = 26.28
+    var toDollar = 0.19
+    var toEuro = 0.19
+    var toYen = 26.28
 }
 
 struct Dollar {
-    var real = 5.17
-    var euro = 0.99
-    var yen = 135.85
+    var toReal = 5.17
+    var toEuro = 0.99
+    var toYen = 135.85
 }
 
 struct Euro {
-    var real = 5.22
-    var dollar = 1.01
-    var yen = 137.05
+    var toReal = 5.22
+    var toDollar = 1.01
+    var toYen = 137.05
 }
 
 struct Yen {
-    var dollar = 0.0074
-    var euro = 0.0073
-    var real = 0.038
+    var toDollar = 0.0074
+    var toEuro = 0.0073
+    var toReal = 0.038
 }
 
